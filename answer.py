@@ -26,7 +26,6 @@ for p in pyramid:
     print(p)
 
 def findPathSum(pyr, m, n):
-    path = ""
     for i in range(m-1, -1, -1):
         for j in range(i+1):
             if (pyr[i+1][j] > pyr[i+1][j+1]) and not isPrime(pyr[i+1][j]):
