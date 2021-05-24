@@ -34,7 +34,8 @@ def findPathSum(pyr, m, n):
                 continue
             else:
                 mx = max(temp[i+1][j],temp[i+1][j+1])
-                pyr[i][j] = temp[i][j] + mx
+                if mx != 0:
+                    pyr[i][j] = temp[i][j] + mx
 
     return pyr[0][0]
 print(findPathSum(pyramid, len(pyramid), len(pyramid)))
